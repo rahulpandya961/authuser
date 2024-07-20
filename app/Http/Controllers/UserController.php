@@ -54,7 +54,12 @@ class UserController extends Controller
         }
     }
     public function showLoginForm() {
-        return view('auth.user.login');
+        
+        if(!auth()->user()){
+            return view('auth.user.login');
+        } else{
+            return redirect()->route('auth.user.dashboard');
+        }
     }
     public function userLogin(Request $request)
     {
@@ -123,7 +128,11 @@ class UserController extends Controller
         return redirect()->route('user.login');
     }
     public function userDashboard()
-    {
-        return view('auth.user.dashboard');
+    {dd('scdfc');
+        if(auth()->user()->role == 'user'){
+            return view('auth.user.dashboard');
+        } else{
+            return view('auth.user.login');
+        }
     }
 }

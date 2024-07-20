@@ -10,7 +10,11 @@ class AdminController extends Controller
     //
     public function showAdminLoginForm()
     {
-        return view('auth.admin.login');
+        if(!auth()->user()){
+            return view('auth.admin.login');
+        } else{
+            return redirect()->route('admin.dashboard');
+        }
     }
 
     public function adminLogin(Request $request)
@@ -39,7 +43,11 @@ class AdminController extends Controller
     }
     public function adminDashboard()
     {
-        return view('auth.admin.dashboard');
+        if(auth()->user()->role == "admin"){
+            return view('auth.admin.dashboard');
+        } else{
+            return redirect()->route('login');
+        }
     }
     public function showProfile()
     {
