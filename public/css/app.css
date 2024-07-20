@@ -1,0 +1,163 @@
+/* Pagination Navigation Styling */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.pagination .flex-1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.pagination .hidden.sm\:flex-1 {
+    display: none;
+}
+
+.pagination .text-sm {
+    font-size: 0.875rem;
+}
+
+.pagination .text-gray-500 {
+    color: #6b7280;
+}
+
+.pagination .text-gray-700 {
+    color: #4b5563;
+}
+
+.pagination .bg-white {
+    background-color: #fff;
+}
+
+.pagination .border-gray-300 {
+    border-color: #d1d5db;
+}
+
+.pagination .rounded-md {
+    border-radius: 0.375rem;
+}
+
+.pagination .cursor-default {
+    cursor: default;
+}
+
+.pagination .leading-5 {
+    line-height: 1.25rem;
+}
+
+.pagination .relative {
+    position: relative;
+}
+
+.pagination .px-4 {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.pagination .py-2 {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+}
+
+.pagination .ml-3 {
+    margin-left: 0.75rem;
+}
+
+.pagination .hover\:text-gray-500:hover {
+    color: #6b7280;
+}
+
+.pagination .focus\:outline-none:focus {
+    outline: none;
+}
+
+.pagination .focus\:ring {
+    outline: 2px solid #a3bffa;
+    outline-offset: 2px;
+}
+
+.pagination .focus\:border {
+    outline: 2px solid #a3bffa;
+}
+
+.pagination .active\:bg-gray-100.active {
+    background-color: #f3f4f6;
+}
+
+.pagination .active\:text-gray-700.active {
+    color: #4b5563;
+}
+
+.pagination .transition {
+    transition-property: background-color, border-color, color, fill, stroke;
+    transition-duration: 150ms;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.pagination .duration-150 {
+    transition-duration: 150ms;
+}
+
+.pagination .ease-in-out {
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+
+/* Table Styling */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    background-color: #fff;
+    border-collapse: collapse;
+}
+
+.table th,
+.table td {
+    padding: 0.75rem;
+    vertical-align: top;
+    border-top: 1px solid #dee2e6;
+}
+
+.table th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+    background-color: #f7f7f9;
+}
+
+.table tbody + tbody {
+    border-top: 2px solid #dee2e6;
+}
+
+.table-sm th,
+.table-sm td {
+    padding: 0.3rem;
+}
+
+.table-bordered {
+    border: 1px solid #dee2e6;
+}
+
+.table-bordered th,
+.table-bordered td {
+    border: 1px solid #dee2e6;
+}
+
+.table-hover tbody tr:hover {
+    background-color: #f7f7f9;
+}
+
+.table-primary,
+.table-primary > th,
+.table-primary > td {
+    background-color: #b8daff;
+}
+
+.table-hover .table-primary:hover {
+    background-color: #9fcdff;
+}
+
+/* Adjust styles as needed */
