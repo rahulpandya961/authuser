@@ -17,18 +17,12 @@ use App\Http\Controllers\UserProductController;
 |
 */
 
-// Route::get('/', function () {
-//     return view('welcome');
-// });
-// Route::get('register', [RegisterController::class, 'showRegistrationForm'])->name('register');
-// Route::post('register', [RegisterController::class, 'register']);
 Route::get('/register', [UserController::class, 'showRegistrationForm'])->name('register');
 Route::post('/register', [UserController::class, 'register']);
 Route::get('/user/login', [UserController::class, 'showLoginForm'])->name('user.login');
 Route::post('/user/login', [UserController::class, 'userLogin'])->name('store.login.user');
 Route::post('/logout', [UserController::class, 'logout'])->name('logout');
 Route::prefix('admin')->group(function () {
-// Routes for user registration
 Route::get('login', [AdminController::class, 'showAdminLoginForm'])->name('login');
 Route::post('login', [AdminController::class, 'adminLogin']);
 Route::post('logout', [AdminController::class, 'adminLogout'])->name('logout.admin');
@@ -57,9 +51,5 @@ Route::prefix('admin')->middleware(['auth', 'admin'])->group(function () {
     Route::delete('products/destroy/{id}', [ProductController::class,'destroy'])->name('auth.admin.products.destroy');
     Route::get('dashboard', [AdminController::class, 'adminDashboard'])->name('admin.dashboard');
 });
-// Route::get('/home', 'HomeController@index')->name('home')->middleware('auth');
-// Route::group(['prefix' => 'admin', 'middleware' => ['auth', 'admin']], function () {
-//     Route::get('/profile', 'AdminController@profile')->name('admin.profile');
-//     Route::put('/profile', 'AdminController@updateProfile')->name('admin.profile.update');
-// });
+
 
