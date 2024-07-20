@@ -128,7 +128,7 @@ class UserController extends Controller
         return redirect()->route('user.login');
     }
     public function userDashboard()
-    {dd('scdfc');
+    {
         if(auth()->user()->role == 'user'){
             return view('auth.user.dashboard');
         } else{
